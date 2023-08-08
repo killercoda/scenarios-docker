@@ -1,0 +1,43 @@
+ubuntu $ pwd
+/root
+ubuntu $ nano Dockerfile
+ubuntu $ ls
+Dockerfile  filesystem
+ubuntu $ docker build -t pinger .
+Sending build context to Docker daemon  23.04kB
+Step 1/2 : FROM bash
+latest: Pulling from library/bash
+7264a8db6415: Already exists 
+735bc6fd85d9: Pull complete 
+5f1191cc3d45: Pull complete 
+Digest: sha256:3c55aa8448e01921ce47fbc58ff8f9037e886afb791f736f47bb83caccb54e9f
+Status: Downloaded newer image for bash:latest
+ ---> 3c04497fad88
+Step 2/2 : CMD ["ping", "killercoda.com"]
+ ---> Running in af029230b1b3
+Removing intermediate container af029230b1b3
+ ---> 69dbced2ceba
+Successfully built 69dbced2ceba
+Successfully tagged pinger:latest
+ubuntu $ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+pinger       latest    69dbced2ceba   14 seconds ago   13.9MB
+<none>       <none>    218d876d46c5   13 minutes ago   9.44MB
+bash         latest    3c04497fad88   14 hours ago     13.9MB
+alpine       latest    7e01a0d0a1dc   15 hours ago     7.34MB
+ubuntu $ docker run --name my-ping pinger
+PING killercoda.com (34.36.67.8): 56 data bytes
+64 bytes from 34.36.67.8: seq=0 ttl=48 time=2.389 ms
+64 bytes from 34.36.67.8: seq=1 ttl=48 time=2.250 ms
+64 bytes from 34.36.67.8: seq=2 ttl=48 time=2.356 ms
+64 bytes from 34.36.67.8: seq=3 ttl=48 time=2.329 ms
+64 bytes from 34.36.67.8: seq=4 ttl=48 time=2.282 ms
+64 bytes from 34.36.67.8: seq=5 ttl=48 time=2.307 ms
+64 bytes from 34.36.67.8: seq=6 ttl=48 time=2.324 ms
+^C64 bytes from 34.36.67.8: seq=7 ttl=48 time=2.249 ms
+64 bytes from 34.36.67.8: seq=8 ttl=48 time=2.302 ms
+
+--- killercoda.com ping statistics ---
+9 packets transmitted, 9 packets received, 0% packet loss
+round-trip min/avg/max = 2.249/2.309/2.389 ms
+ubuntu $ 
