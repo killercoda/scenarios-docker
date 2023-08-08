@@ -1,0 +1,11 @@
+ubuntu $ docker tag pinger pinger:v1
+ubuntu $ docker tag pinger local-registry:5000/pinger:v1
+ubuntu $ docker image ls
+REPOSITORY                   TAG       IMAGE ID       CREATED          SIZE
+local-registry:5000/pinger   v1        69dbced2ceba   5 minutes ago    13.9MB
+pinger                       latest    69dbced2ceba   5 minutes ago    13.9MB
+pinger                       v1        69dbced2ceba   5 minutes ago    13.9MB
+<none>                       <none>    218d876d46c5   18 minutes ago   9.44MB
+bash                         latest    3c04497fad88   14 hours ago     13.9MB
+alpine                       latest    7e01a0d0a1dc   15 hours ago     7.34MB
+ubuntu $ 
