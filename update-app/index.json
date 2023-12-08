@@ -1,6 +1,6 @@
 {
   "title": "Update containerized application",
-  "description": "Update containerized application",
+  "description": "Rebuild image",
   "details": {
     "intro": {
       "text": "intro.md",

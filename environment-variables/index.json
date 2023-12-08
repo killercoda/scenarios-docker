@@ -1,5 +1,5 @@
 {
-  "title": "Run docker container with environment variables",
+  "title": "Using environment variables",
   "description": "Run docker container with environment variables",
   "details": {
     "intro": {

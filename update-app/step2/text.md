@@ -5,7 +5,10 @@ Build docker image `app/v2` from `/root/Dockerfile`.
 
 Remove container `app`.
 
-Start the container named app (using `app/v2` image), linking port 3000 from the host to port 3000 within the container.
+Start the container named `app`, it should:
+* use `app/v2` image
+* map port 3000 on the host with port 3000 in the container
+* run in the background (use -d flag)
 
 
 Make a request to localhost:3000.
@@ -42,7 +45,7 @@ Use --help flag to see the help.
 
 <br>
 
-Append line <h2>Some updates for app/v2</h2> to index.html file:
+Append line `<h2>Some updates for app/v2</h2>` to `/root/index.html` file:
 
 <br>
 
@@ -69,9 +72,11 @@ Delete container app created from the image app/v1:
 
 ```plain
 docker rm -f app
+```{{exec}}
 OR
+```plain
 docker stop app && docker rm app
-```{{copy}}
+```{{exec}}
 
 
 <br>

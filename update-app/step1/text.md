@@ -1,7 +1,10 @@
 
 Build docker image named `app/v1` using `/root/Dockerfile`.
 
-Start the container named app, linking port 3000 from the host to port 3000 within the container.
+Start the container named `app`, it should:
+* use `app/v1` image
+* map port 3000 on the host with port 3000 in the container
+* run in the background (use -d flag)
 
 Make a request to localhost:3000.
 

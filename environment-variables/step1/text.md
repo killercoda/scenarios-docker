@@ -1,11 +1,13 @@
 
-Create a Dockerfile using the nginx:alpine image and define an environment variable key1=value1.
+Create a new file `/root/Dockerfile` to build a container image from. It should:
+* use `nginx:alpine` as base
+* define environment variable `key1=value1`
 
 Build the image and tag it as `sample-image`.
 
 Instantiate a container named `sample-app`.
 
-Confirm the presence of the environment variable key1=value1 within the container.
+Confirm the presence of the environment variable `key1=value1` within the container.
 
 
 <br>
