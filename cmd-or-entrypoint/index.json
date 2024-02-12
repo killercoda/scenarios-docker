@@ -1,6 +1,6 @@
 {
   "title": "CMD or ENTRYPOINT",
-  "description": "CMD or ENTRYPOINT",
+  "description": "Feel the difference between CMD and ENTRYPOINT",
   "details": {
     "intro": {
       "text": "intro.md",

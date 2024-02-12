@@ -1,6 +1,6 @@
 {
   "title": "Port-forwarding in Docker",
-  "description": "Port-forwarding in Docker",
+  "description": "Open ports in Docker containers",
   "details": {
     "intro": {
       "text": "intro.md",

@@ -1,6 +1,6 @@
 {
   "title": "Dockerfile best practices",
-  "description": "Dockerfile best practices",
+  "description": "Write Dockerfile the right way",
   "details": {
     "intro": {
       "text": "intro.md",
