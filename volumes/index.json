@@ -1,5 +1,5 @@
 {
-  "title": "Run container with mounted volume",
+  "title": "Using volume mounts",
   "description": "Run container with mounted volume",
   "details": {
     "intro": {

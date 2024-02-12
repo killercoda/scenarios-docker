@@ -1,6 +1,6 @@
 {
   "title": "Network drivers",
-  "description": "Network drivers",
+  "description": "Run container in different kind of network",
   "details": {
     "intro": {
       "text": "intro.md",
