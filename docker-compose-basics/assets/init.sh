@@ -10,21 +10,13 @@ EOT
 rm $0
 mkdir -p /opt/ks
 
-# Install docker-compose if not present
-if ! command -v docker-compose &> /dev/null; then
-    curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    chmod +x /usr/local/bin/docker-compose
-fi
-
-# Create working directories
+# scenario specific
 mkdir -p /root/compose-project
 mkdir -p /root/web-app
 mkdir -p /root/full-stack
 
-# Create a simple HTML file for nginx
 echo "<h1>Hello from Docker Compose!</h1>" > /root/web-app/index.html
 
-# Create a simple app for multi-service demo
 cat > /root/full-stack/index.html <<EOF
 <!DOCTYPE html>
 <html>
