@@ -1,27 +1,16 @@
 #!/bin/bash
 
-show_progress()
-{
-  echo -n "Starting"
-  local -r pid="${1}"
-  local -r delay='0.75'
-  local spinstr='\|/-'
-  local temp
-  while true; do 
-    grep -i "done" /ks/.initfinished &> /dev/null
-    if [[ "$?" -ne 0 ]]; then     
-      temp="${spinstr#?}"
-      printf " [%c]  " "${spinstr}"
-      spinstr=${temp}${spinstr%"${temp}"}
-      sleep "${delay}"
-      printf "\b\b\b\b\b\b"
-    else
-      printf "    \b\b\b\b"
-      break
-    fi
-  done
-  printf "\n"
-}
+# waits for background init to finish
 
-show_progress
-echo "Environment ready!"
+rm $0
+
+clear
+
+echo -n "Initialising Scenario..."
+while [ ! -f /ks/.initfinished ]; do
+    echo -n '.'
+    sleep 1;
+done;
+echo " done"
+
+echo
