@@ -126,24 +126,4 @@ You can also use docker ps to see all containers:
 docker ps | grep worker
 ```{{exec}}
 
-<br>
-
-Scale down to 2 instances:
-
-<br>
-
-```plain
-docker-compose up -d --scale worker=2
-```{{exec}}
-
-<br>
-
-Stop all services:
-
-<br>
-
-```plain
-docker-compose down
-```{{exec}}
-
 </details>
